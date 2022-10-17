@@ -183,5 +183,11 @@ class OnBluetoothPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
   override fun onDetachedFromActivity() {
     Log.e("Xdebug", "Not yet implemented")
+    if (activity != null) {
+          try {
+            activity.unregisterReceiver(mReceiver)
+          } catch (e: Exception) {
+          // unregister duplicate
+        }
   }
 }
