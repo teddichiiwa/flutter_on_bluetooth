@@ -189,5 +189,6 @@ class OnBluetoothPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
           } catch (e: Exception) {
           // unregister duplicate
         }
+    }
   }
 }
